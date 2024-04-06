@@ -3,7 +3,9 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  define: { "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV) },
   plugins: [remix(), tsconfigPaths()],
-  ssr: { noExternal: true },
+  ...(process?.env.NODE_ENV === "production" && {
+    define: { "process.env.NODE_ENV": JSON.stringify("production") },
+    ssr: { noExternal: true },
+  }),
 });
