@@ -1,74 +1,77 @@
+# NOTES
+
+This is a fork from the
+[remix-run/templates/classic-remix-compiler/deno](https://github.com/remix-run/remix/tree/6edd56211c5b256e2e78f781695fdb39a037463e/templates/classic-remix-compiler/deno)
+template which modernizes it to use Remix v2 with Vite. I have opted to use
+[Yarn v4](https://yarnpkg.com/) instead of npm for this template but this is
+ultimately a personal preference - any package manager should work fine here.
+
+There are two servers:
+
+- `server.dev.ts`: used for development, it pairs the vite dev server in
+  middleware mode with express (so HMR works out of the box)
+- `server.prod.ts`: used in production, it uses `Deno.serve` directly for
+  maximum performance
+
+Additionally this template uses a React 18.3 canary as older React versions do
+not allow you to import `renderToReadableStream` from `react-dom/server` in
+Node.js environments, see
+[this issue](https://github.com/facebook/react/issues/26906) for more details.
+React 18.3 solves this by introducing the `react-dom/server.edge` export which
+includes `renderToReadableStream`.
+
+This template has been tested with Deno v1.42.1 and relies on the unstable
+`byonm` flag to function which will come enabled by default in Deno 2,
+https://github.com/denoland/deno/issues/23151.
+
 # Remix + Deno
 
 Welcome to the Deno template for Remix! 🦕
 
 For more, check out the [Remix docs](https://remix.run/docs).
 
-## Install
-
-```sh
-npx create-remix@latest --template deno
-```
-
 ## Managing dependencies
 
-Read about
-[how we recommend to manage dependencies for Remix projects using Deno](https://github.com/remix-run/remix/blob/main/decisions/0001-use-npm-to-manage-npm-dependencies-for-deno-projects.md).
-
-- ✅ You should use `npm` to install NPM packages
+- ✅ You should use `yarn` to add packages
   ```sh
-  npm install react
+  yarn add react
   ```
   ```ts
   import { useState } from "react";
   ```
-- ✅ You may use inlined URL imports or
-  [deps.ts](https://deno.land/manual/examples/manage_dependencies#managing-dependencies)
-  for Deno modules.
+- ✅ You may use inlined URL imports, JSR imports or NPM imports for Deno
+  modules.
   ```ts
   import { copy } from "https://deno.land/std@0.138.0/streams/conversion.ts";
   ```
-- ❌ Do not use
-  [import maps](https://deno.land/manual/linking_to_external_code/import_maps).
 
 ## Development
 
 From your terminal:
 
 ```sh
-npm run dev
+yarn dev
 ```
 
 This starts your app in development mode, rebuilding assets on file changes.
-
-### Type hints
-
-This template provides type hinting to VS Code via a
-[dedicated import map](./.vscode/resolve_npm_imports.json).
-
-To get types in another editor, use an extension for Deno that supports import
-maps and point your editor to `./.vscode/resolve_npm_imports.json`.
-
-For more, see
-[our decision doc for interop between Deno and NPM](https://github.com/remix-run/remix/blob/main/decisions/0001-use-npm-to-manage-npm-dependencies-for-deno-projects.md#vs-code-type-hints).
 
 ## Production
 
 First, build your app for production:
 
 ```sh
-npm run build
+yarn build
 ```
 
 Then run the app in production mode:
 
 ```sh
-npm start
+yarn start
 ```
 
 ## Deployment
 
-Building the Deno app (`npm run build`) results in two outputs:
+Building the Deno app (`yarn build`) results in two outputs:
 
 - `build/` (server bundle)
 - `public/build/` (browser bundle)
@@ -88,7 +91,7 @@ deploying to [Deno Deploy](https://deno.com/deploy).
 ```json filename=package.json
 {
   "scripts": {
-    "deploy": "deployctl deploy --project=<your deno deploy project> --include=.cache,build,public ./build/index.js"
+    "deploy": "deployctl deploy --project=<your deno deploy project> --include=build,server-prod.ts ./server.prod.ts"
   }
 }
 ```
@@ -109,7 +112,7 @@ GitHub secret.
    [`deployctl`](https://github.com/denoland/deployctl):
 
 ```sh
-deno install --allow-read --allow-write --allow-env --allow-net --allow-run --no-check -r -f https://deno.land/x/deploy/deployctl.ts
+deno install -Arf jsr:@deno/deployctl
 ```
 
 6. If you have previously installed the Deno Deploy CLI, you should update it to
@@ -124,5 +127,5 @@ deployctl upgrade
 After you've set up Deno Deploy, run:
 
 ```sh
-npm run deploy
+yarn deploy
 ```

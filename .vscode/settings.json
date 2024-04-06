@@ -1,4 +1,6 @@
 {
+  "deno.disablePaths": ["./app/", "./vite.config.mts"],
   "deno.enable": true,
-  "deno.lint": true
+  "deno.lint": true,
+  "editor.defaultFormatter": "denoland.vscode-deno"
 }

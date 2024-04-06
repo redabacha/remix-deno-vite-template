@@ -1,0 +1,9 @@
+import { vitePlugin as remix } from "@remix-run/dev";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+export default defineConfig({
+  define: { "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV) },
+  plugins: [remix(), tsconfigPaths()],
+  ssr: { noExternal: true },
+});
