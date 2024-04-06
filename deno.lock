@@ -24,6 +24,7 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:@deno/types@^0.0.1",
         "npm:@remix-run/deno@^2.8.1",
         "npm:@remix-run/dev@^2.8.1",
         "npm:@remix-run/express@^2.8.1",

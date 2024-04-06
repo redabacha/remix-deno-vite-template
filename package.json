@@ -16,6 +16,7 @@
     "react-dom": "18.3.0-canary-c3048aab4-20240326"
   },
   "devDependencies": {
+    "@deno/types": "^0.0.1",
     "@remix-run/dev": "^2.8.1",
     "@remix-run/express": "^2.8.1",
     "@types/express": "^4",

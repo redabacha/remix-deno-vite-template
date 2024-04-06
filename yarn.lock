@@ -407,6 +407,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@deno/types@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@deno/types@npm:0.0.1"
+  checksum: 10c0/b64ce16b61cfb54124f2c0a14a1db0c25165fcddbdab449665478fe986803c48aa19905996c91d6eabae695db833d37a8b97fad06bcdc5029944b8853cd8e83e
+  languageName: node
+  linkType: hard
+
 "@emotion/hash@npm:^0.9.0":
   version: 0.9.1
   resolution: "@emotion/hash@npm:0.9.1"
@@ -5701,6 +5708,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
+    "@deno/types": "npm:^0.0.1"
     "@remix-run/deno": "npm:^2.8.1"
     "@remix-run/dev": "npm:^2.8.1"
     "@remix-run/express": "npm:^2.8.1"
