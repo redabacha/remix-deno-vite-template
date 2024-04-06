@@ -15,7 +15,7 @@ There are two servers:
 
 Additionally this template uses a React 18.3 canary as older React versions do
 not allow you to import `renderToReadableStream` from `react-dom/server` in
-Node.js environments, see
+certain environments, see
 [this issue](https://github.com/facebook/react/issues/26906) for more details.
 React 18.3 solves this by introducing the `react-dom/server.edge` export which
 includes `renderToReadableStream`.
@@ -23,6 +23,8 @@ includes `renderToReadableStream`.
 This template has been tested with Deno v1.42.1 and relies on the unstable
 `byonm` flag to function which will come enabled by default in Deno 2,
 https://github.com/denoland/deno/issues/23151.
+
+Live deployment: https://huge-badger-89.deno.dev/
 
 # Remix + Deno
 
@@ -73,8 +75,8 @@ yarn start
 
 Building the Deno app (`yarn build`) results in two outputs:
 
-- `build/` (server bundle)
-- `public/build/` (browser bundle)
+- `build/server` (server bundle)
+- `build/client` (browser bundle)
 
 You can deploy these bundles to any host that runs Deno, but here we'll focus on
 deploying to [Deno Deploy](https://deno.com/deploy).
