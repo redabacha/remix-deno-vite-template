@@ -1,3 +1,38 @@
 {
-  "unstable": ["byonm"]
+  "tasks": {
+    "build": "deno run -A npm:@remix-run/dev@^2.11.2 vite:build",
+    "deploy": "deployctl deploy --prod --include=build,server-prod.ts --project=<your deno deploy project> ./server.prod.ts",
+    "dev": "deno run -A --watch --watch-exclude='vite.config.mts.timestamp-*.mjs' ./server.dev.ts",
+    "start": "deno serve -A --parallel ./server.prod.ts"
+  },
+  "imports": {
+    "@remix-run/deno": "npm:@remix-run/deno@^2.11.2",
+    "@remix-run/dev": "npm:@remix-run/dev@^2.11.2",
+    "@remix-run/express": "npm:@remix-run/express@^2.11.2",
+    "@remix-run/react": "npm:@remix-run/react@^2.11.2",
+    "@remix-run/server-runtime": "npm:@remix-run/server-runtime@^2.11.2",
+    "@types/node": "npm:@types/node@^22.5.1",
+    "@types/react": "npm:@types/react@^18.3.4",
+    "express": "npm:express@^4.19.2",
+    "isbot": "npm:isbot@^5.1.17",
+    "react": "npm:react@^18.3.1",
+    "react-dom": "npm:react-dom@^18.3.1",
+    "tailwindcss": "npm:tailwindcss@^3.4.10",
+    "typescript": "npm:typescript@^5.5.4",
+    "vite": "npm:vite@^5.4.2",
+    "vite-tsconfig-paths": "npm:vite-tsconfig-paths@^5.0.1"
+  },
+  "nodeModulesDir": true,
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "jsxImportSourceTypes": "@types/react",
+    "lib": [
+      "deno.ns",
+      "dom"
+    ]
+  },
+  "exclude": [
+    "build/"
+  ]
 }

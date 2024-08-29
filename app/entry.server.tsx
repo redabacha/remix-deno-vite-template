@@ -7,19 +7,24 @@
 import type { AppLoadContext, EntryContext } from "@remix-run/deno";
 import { RemixServer } from "@remix-run/react";
 import { isbot } from "isbot";
-import { renderToReadableStream } from "react-dom/server.edge";
+import { renderToReadableStream } from "react-dom/server.browser";
 
 export default async function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
   remixContext: EntryContext,
+  // This is ignored so we can keep it in the template for visibility.  Feel
+  // free to delete this parameter in your app if you're not using it!
+  // deno-lint-ignore no-unused-vars
   loadContext: AppLoadContext,
 ) {
   const body = await renderToReadableStream(
     <RemixServer context={remixContext} url={request.url} />,
     {
-      signal: request.signal,
+      // Deno seems to encounter 'TypeError: Closed already requested.' on every request when this abort signal is passed.
+      // I believe this is due to Deno v1.43+ always aborting requests once the response is complete which conflicts with SSR also aborting the same signal, https://deno.com/blog/v1.43#response-completion.
+      // signal: request.signal,
       onError(error: unknown) {
         // Log streaming rendering errors from inside the shell
         console.error(error);
@@ -28,7 +33,7 @@ export default async function handleRequest(
     },
   );
 
-  if (isbot(request.headers.get("user-agent"))) {
+  if (isbot(request.headers.get("user-agent") || "")) {
     await body.allReady;
   }
 
