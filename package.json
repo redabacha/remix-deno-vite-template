@@ -1,32 +1,32 @@
 {
   "private": true,
   "sideEffects": false,
-  "packageManager": "yarn@4.1.1",
+  "packageManager": "yarn@4.4.1",
   "scripts": {
     "build": "remix vite:build",
     "deploy": "deployctl deploy --prod --include=build,server-prod.ts --project=<your deno deploy project> ./server.prod.ts",
-    "dev": "deno run -A --watch ./server.dev.ts",
+    "dev": "deno run -A --watch --watch-exclude='vite.config.mts.timestamp-*.mjs' ./server.dev.ts",
     "start": "deno run -A ./server.prod.ts"
   },
   "dependencies": {
-    "@remix-run/deno": "^2.8.1",
-    "@remix-run/react": "^2.8.1",
-    "isbot": "^5.1.4",
+    "@remix-run/deno": "^2.11.2",
+    "@remix-run/react": "^2.11.2",
+    "isbot": "^5.1.17",
     "react": "18.3.0-canary-c3048aab4-20240326",
     "react-dom": "18.3.0-canary-c3048aab4-20240326"
   },
   "devDependencies": {
     "@deno/types": "^0.0.1",
-    "@remix-run/dev": "^2.8.1",
-    "@remix-run/express": "^2.8.1",
-    "@types/express": "^4",
-    "@types/node": "^20.12.5",
-    "@types/react": "^18.2.74",
-    "@types/react-dom": "^18.2.24",
+    "@remix-run/dev": "^2.11.2",
+    "@remix-run/express": "^2.11.2",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.1",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
     "express": "^4.19.2",
-    "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.4",
-    "vite": "^5.2.8",
-    "vite-tsconfig-paths": "^4.3.2"
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2",
+    "vite-tsconfig-paths": "^5.0.1"
   }
 }

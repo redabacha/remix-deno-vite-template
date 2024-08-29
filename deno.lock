@@ -12,35 +12,36 @@
     "https://deno.land/std@0.128.0/path/posix.ts": "663e4a6fe30a145f56aa41a22d95114c4c5582d8b57d2d7c9ed27ad2c47636bb",
     "https://deno.land/std@0.128.0/path/separator.ts": "fe1816cb765a8068afb3e8f13ad272351c85cbc739af56dacfc7d93d710fe0f9",
     "https://deno.land/std@0.128.0/path/win32.ts": "e7bdf63e8d9982b4d8a01ef5689425c93310ece950e517476e22af10f41a136e",
-    "https://esm.sh/@remix-run/deno@2.8.1": "220e54e1cf61da733db44ba80865fe4eb4abd3a416476786bae8b3fabf6b9938",
-    "https://esm.sh/v135/@remix-run/deno@2.8.1/denonext/deno.mjs": "5ee6242061e86a1b6984b1c8ae20b223a282a14e7dbced0478fd3dc6fa29fbe3",
-    "https://esm.sh/v135/@remix-run/router@1.15.3/denonext/router.mjs": "434288988bdd5d5d2dbf2ad6e8159413456fd233cd7f83f17d7bfc2c558a655f",
-    "https://esm.sh/v135/@remix-run/server-runtime@2.8.1/denonext/server-runtime.mjs": "8ba18041ddedd2d9fbf7465c0be3c691acaa793d3fa3371ccef4b470183efdb6",
+    "https://esm.sh/@remix-run/deno@2.11.2": "b37ea6c60f15da5c538dcf90afbe5b600096f4eb9fbd259a0d84535bca99caaf",
+    "https://esm.sh/v135/@remix-run/deno@2.11.2/denonext/deno.mjs": "e8cbc1716ed5acd1c872a67198d542b77834e4d1bc0a6d077ed90ef4a5b8f03f",
+    "https://esm.sh/v135/@remix-run/router@1.19.1/denonext/router.mjs": "011812da92135cd45c55d439440510e3aecc0b3e8dee5965fc27db7f118a3b12",
+    "https://esm.sh/v135/@remix-run/server-runtime@2.11.2/denonext/server-runtime.mjs": "947cf9fcefeda6ea94b0085480f4b57a21a4e778310f9acf919cc6fbad0f7d62",
     "https://esm.sh/v135/@web3-storage/multipart-parser@1.0.0/denonext/multipart-parser.mjs": "061354aadbf549638f6d92e9f9c54adb5e82cb8e3e8320030cc78a52d21b25d4",
     "https://esm.sh/v135/cookie@0.6.0/denonext/cookie.mjs": "688128a8a735ce2a9f09fba0051d6f4f7230fd9816a353f5dc75ac40defc1e79",
     "https://esm.sh/v135/mime@3.0.0/denonext/mime.mjs": "7fe83d762ec6d1bac50893acc45af4ff52d5ad0176959c4bc48ae0cde77ab50f",
-    "https://esm.sh/v135/set-cookie-parser@2.6.0/denonext/set-cookie-parser.mjs": "cd71b512f7bc0a5f8ca55e8b125d9f3efde896b81a6cbb6827b01af8259b5007"
+    "https://esm.sh/v135/set-cookie-parser@2.6.0/denonext/set-cookie-parser.mjs": "cd71b512f7bc0a5f8ca55e8b125d9f3efde896b81a6cbb6827b01af8259b5007",
+    "https://esm.sh/v135/turbo-stream@2.3.0/denonext/turbo-stream.mjs": "aecba652d3217195f5019988f8b55aeb4db09e5a8162f1864c31b39e322b7eba"
   },
   "workspace": {
     "packageJson": {
       "dependencies": [
         "npm:@deno/types@^0.0.1",
-        "npm:@remix-run/deno@^2.8.1",
-        "npm:@remix-run/dev@^2.8.1",
-        "npm:@remix-run/express@^2.8.1",
-        "npm:@remix-run/react@^2.8.1",
-        "npm:@types/express@^4",
-        "npm:@types/node@^20.12.5",
-        "npm:@types/react-dom@^18.2.24",
-        "npm:@types/react@^18.2.74",
+        "npm:@remix-run/deno@^2.11.2",
+        "npm:@remix-run/dev@^2.11.2",
+        "npm:@remix-run/express@^2.11.2",
+        "npm:@remix-run/react@^2.11.2",
+        "npm:@types/express@^4.17.21",
+        "npm:@types/node@^22.5.1",
+        "npm:@types/react-dom@^18.3.0",
+        "npm:@types/react@^18.3.4",
         "npm:express@^4.19.2",
-        "npm:isbot@^5.1.4",
+        "npm:isbot@^5.1.17",
         "npm:react-dom@18.3.0-canary-c3048aab4-20240326",
         "npm:react@18.3.0-canary-c3048aab4-20240326",
-        "npm:tailwindcss@^3.4.3",
-        "npm:typescript@^5.4.4",
-        "npm:vite-tsconfig-paths@^4.3.2",
-        "npm:vite@^5.2.8"
+        "npm:tailwindcss@^3.4.10",
+        "npm:typescript@^5.5.4",
+        "npm:vite-tsconfig-paths@^5.0.1",
+        "npm:vite@^5.4.2"
       ]
     }
   }

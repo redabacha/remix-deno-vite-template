@@ -1,5 +1,5 @@
 // @remix-run/deno npm package is broken (ships ts instead of js) hence esm.sh import
-import { createRequestHandlerWithStaticFiles } from "https://esm.sh/@remix-run/deno@2.8.1";
+import { createRequestHandlerWithStaticFiles } from "https://esm.sh/@remix-run/deno@2.11.2";
 
 Deno.serve(
   {
