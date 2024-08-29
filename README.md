@@ -8,7 +8,7 @@ ultimately a personal preference - any package manager should work fine here.
 
 There are two servers:
 
-- `server.dev.ts`: used for development, it pairs the vite dev server in
+- `server.dev.ts`: used in development, it pairs the vite dev server in
   middleware mode with express (so HMR works out of the box)
 - `server.prod.ts`: used in production, it uses `Deno.serve` directly for
   maximum performance
@@ -20,8 +20,8 @@ certain environments, see
 React 18.3 solves this by introducing the `react-dom/server.edge` export which
 includes `renderToReadableStream`.
 
-This template has been tested with Deno v1.42.1 and relies on the unstable
-`byonm` flag to function which will come enabled by default in Deno 2,
+This template has been tested with Node v22.7.0 + Deno v1.46.1 and relies on the
+unstable `byonm` flag to function which will come enabled by default in Deno 2,
 https://github.com/denoland/deno/issues/23151.
 
 Live deployment: https://huge-badger-89.deno.dev/
