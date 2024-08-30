@@ -16,9 +16,9 @@ app.all(
   "*",
   createRequestHandler({
     build: () =>
-      viteDevServer.ssrLoadModule("virtual:remix/server-build") as Promise<
-        ServerBuild
-      >,
+      viteDevServer.ssrLoadModule(
+        "virtual:remix/server-build",
+      ) as Promise<ServerBuild>,
     getLoadContext: () => ({}),
     mode: "development",
   }),

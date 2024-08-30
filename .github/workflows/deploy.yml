@@ -30,10 +30,10 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "huge-badger-89"
-          entrypoint: "server.prod.ts"
+          entrypoint: "server/production.ts"
           root: ""
           include: |
-            build
             deno.jsonc
             deno.lock
-            server.prod.ts
+            build
+            server
