@@ -1,16 +1,17 @@
 {
   "tasks": {
     "build": "deno run -A npm:@remix-run/dev@^2.11.2 vite:build",
-    "deploy": "deployctl deploy --prod --include=build,server-prod.ts --project=<your deno deploy project> ./server.prod.ts",
+    "deploy": "deployctl deploy --prod --include=build,deno.jsonc,deno.lock,server-prod.ts --project=<your deno deploy project> ./server.prod.ts",
     "dev": "deno run -A --watch --watch-exclude='vite.config.mts.timestamp-*.mjs' ./server.dev.ts",
     "start": "deno serve -A --parallel ./server.prod.ts"
   },
   "imports": {
-    "@remix-run/deno": "npm:@remix-run/deno@^2.11.2",
     "@remix-run/dev": "npm:@remix-run/dev@^2.11.2",
     "@remix-run/express": "npm:@remix-run/express@^2.11.2",
     "@remix-run/react": "npm:@remix-run/react@^2.11.2",
     "@remix-run/server-runtime": "npm:@remix-run/server-runtime@^2.11.2",
+    "@std/http": "jsr:@std/http@^1.0.4",
+    "@std/path": "jsr:@std/path@^1.0.3",
     "@types/node": "npm:@types/node@^22.5.1",
     "@types/react": "npm:@types/react@^18.3.4",
     "express": "npm:express@^4.19.2",

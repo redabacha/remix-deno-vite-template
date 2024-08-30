@@ -2,12 +2,18 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "npm:@remix-run/deno@^2.11.2": "npm:@remix-run/deno@2.11.2",
-      "npm:@remix-run/dev@^2.11.2": "npm:@remix-run/dev@2.11.2_@remix-run+react@2.11.2__react@18.3.1__react-dom@18.3.1___react@18.3.1_vite@5.4.2__@types+node@18.16.19_@babel+core@7.25.2_react@18.3.1_react-dom@18.3.1__react@18.3.1_esbuild@0.17.6_postcss@8.4.41_@types+node@18.16.19",
+      "jsr:@std/cli@^1.0.4": "jsr:@std/cli@1.0.4",
+      "jsr:@std/encoding@^1.0.3": "jsr:@std/encoding@1.0.3",
+      "jsr:@std/fmt@^1.0.1": "jsr:@std/fmt@1.0.1",
+      "jsr:@std/http@^1.0.4": "jsr:@std/http@1.0.4",
+      "jsr:@std/media-types@^1.0.3": "jsr:@std/media-types@1.0.3",
+      "jsr:@std/net@^1.0.1": "jsr:@std/net@1.0.1",
+      "jsr:@std/path@^1.0.3": "jsr:@std/path@1.0.3",
+      "jsr:@std/streams@^1.0.3": "jsr:@std/streams@1.0.3",
+      "npm:@remix-run/dev@^2.11.2": "npm:@remix-run/dev@2.11.2_@remix-run+react@2.11.2__react@18.3.1__react-dom@18.3.1___react@18.3.1_vite@5.4.2_@babel+core@7.25.2_react@18.3.1_react-dom@18.3.1__react@18.3.1_esbuild@0.17.6_postcss@8.4.41",
       "npm:@remix-run/express@^2.11.2": "npm:@remix-run/express@2.11.2_express@4.19.2",
       "npm:@remix-run/react@^2.11.2": "npm:@remix-run/react@2.11.2_react@18.3.1_react-dom@18.3.1__react@18.3.1",
       "npm:@remix-run/server-runtime@^2.11.2": "npm:@remix-run/server-runtime@2.11.2",
-      "npm:@types/node": "npm:@types/node@18.16.19",
       "npm:@types/node@^22.5.1": "npm:@types/node@22.5.1",
       "npm:@types/react@^18.3.4": "npm:@types/react@18.3.4",
       "npm:express@^4.19.2": "npm:express@4.19.2",
@@ -16,8 +22,43 @@
       "npm:react@^18.3.1": "npm:react@18.3.1",
       "npm:tailwindcss@^3.4.10": "npm:tailwindcss@3.4.10_postcss@8.4.41",
       "npm:typescript@^5.5.4": "npm:typescript@5.5.4",
-      "npm:vite-tsconfig-paths@^5.0.1": "npm:vite-tsconfig-paths@5.0.1_vite@5.4.2__@types+node@18.16.19_@types+node@18.16.19",
-      "npm:vite@^5.4.2": "npm:vite@5.4.2_@types+node@18.16.19"
+      "npm:vite-tsconfig-paths@^5.0.1": "npm:vite-tsconfig-paths@5.0.1_vite@5.4.2",
+      "npm:vite@^5.4.2": "npm:vite@5.4.2"
+    },
+    "jsr": {
+      "@std/cli@1.0.4": {
+        "integrity": "79ca75add572a99a8ba93ae37ccbd8d43fb4e2b635a8a7ebebb4f2d092048764"
+      },
+      "@std/encoding@1.0.3": {
+        "integrity": "5dbc2d7f5aa6062de7e19862ea856ac7a0dcce0b6fb46bb7b332d3bdcd4408b7"
+      },
+      "@std/fmt@1.0.1": {
+        "integrity": "ef76c37faa7720faa8c20fd8cc74583f9b1e356dfd630c8714baa716a45856ab"
+      },
+      "@std/http@1.0.4": {
+        "integrity": "1a8142217907d49c4687f90ef3d257e7df2baf344c5122c322d7316df09df453",
+        "dependencies": [
+          "jsr:@std/cli@^1.0.4",
+          "jsr:@std/encoding@^1.0.3",
+          "jsr:@std/fmt@^1.0.1",
+          "jsr:@std/media-types@^1.0.3",
+          "jsr:@std/net@^1.0.1",
+          "jsr:@std/path@^1.0.3",
+          "jsr:@std/streams@^1.0.3"
+        ]
+      },
+      "@std/media-types@1.0.3": {
+        "integrity": "b12d30a7852f7578f4d210622df713bbfd1cbdd9b4ec2eaf5c1845ab70bab159"
+      },
+      "@std/net@1.0.1": {
+        "integrity": "27fe136ab7ae81f425df90aad190bae2c87d2aef3d1a49cbc0efc1daa287d794"
+      },
+      "@std/path@1.0.3": {
+        "integrity": "cd89d014ce7eb3742f2147b990f6753ee51d95276bfc211bc50c860c1bc7df6f"
+      },
+      "@std/streams@1.0.3": {
+        "integrity": "d62e645ab981cee2c3d03040eb03cf387fc6bceef6d4564f3ed485a43741a81f"
+      }
     },
     "npm": {
       "@alloc/quick-lru@5.2.0": {
@@ -584,14 +625,7 @@
         "integrity": "sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==",
         "dependencies": {}
       },
-      "@remix-run/deno@2.11.2": {
-        "integrity": "sha512-6UmvLxv8ePrYTisrL/iZq1bnESwnkHGjHRYca0ERLfG+DuwYp3VbhALq1cOP5lKo4VIuj1MufsgxXEIV3WICSQ==",
-        "dependencies": {
-          "@remix-run/server-runtime": "@remix-run/server-runtime@2.11.2",
-          "mime": "mime@3.0.0"
-        }
-      },
-      "@remix-run/dev@2.11.2_@remix-run+react@2.11.2__react@18.3.1__react-dom@18.3.1___react@18.3.1_vite@5.4.2__@types+node@18.16.19_@babel+core@7.25.2_react@18.3.1_react-dom@18.3.1__react@18.3.1_esbuild@0.17.6_postcss@8.4.41_@types+node@18.16.19": {
+      "@remix-run/dev@2.11.2_@remix-run+react@2.11.2__react@18.3.1__react-dom@18.3.1___react@18.3.1_vite@5.4.2_@babel+core@7.25.2_react@18.3.1_react-dom@18.3.1__react@18.3.1_esbuild@0.17.6_postcss@8.4.41": {
         "integrity": "sha512-9DGb2UOIO4jOdws04Z+KmCeEBqbP36XvJZdcd4w16wDGI0I1ZY1c5ro58tB/7zPwN40s9MD9UzCYm6P+EkdeAg==",
         "dependencies": {
           "@babel/core": "@babel/core@7.25.2",
@@ -609,7 +643,7 @@
           "@remix-run/router": "@remix-run/router@1.19.1",
           "@remix-run/server-runtime": "@remix-run/server-runtime@2.11.2",
           "@types/mdx": "@types/mdx@2.0.13",
-          "@vanilla-extract/integration": "@vanilla-extract/integration@6.5.0_@babel+core@7.25.2_@types+node@18.16.19",
+          "@vanilla-extract/integration": "@vanilla-extract/integration@6.5.0_@babel+core@7.25.2",
           "arg": "arg@5.0.2",
           "cacache": "cacache@17.1.4",
           "chalk": "chalk@4.1.2",
@@ -647,7 +681,7 @@
           "set-cookie-parser": "set-cookie-parser@2.7.0",
           "tar-fs": "tar-fs@2.1.1",
           "tsconfig-paths": "tsconfig-paths@4.2.0",
-          "vite": "vite@5.4.2_@types+node@18.16.19",
+          "vite": "vite@5.4.2",
           "ws": "ws@7.5.10"
         }
       },
@@ -894,7 +928,7 @@
           "picocolors": "picocolors@1.0.1"
         }
       },
-      "@vanilla-extract/integration@6.5.0_@babel+core@7.25.2_@types+node@18.16.19": {
+      "@vanilla-extract/integration@6.5.0_@babel+core@7.25.2": {
         "integrity": "sha512-E2YcfO8vA+vs+ua+gpvy1HRqvgWbI+MTlUpxA8FvatOvybuNcWAY0CKwQ/Gpj7rswYKtC6C7+xw33emM6/ImdQ==",
         "dependencies": {
           "@babel/core": "@babel/core@7.25.2",
@@ -908,8 +942,8 @@
           "lodash": "lodash@4.17.21",
           "mlly": "mlly@1.7.1",
           "outdent": "outdent@0.8.0",
-          "vite": "vite@5.4.2_@types+node@18.16.19",
-          "vite-node": "vite-node@1.6.0_@types+node@18.16.19"
+          "vite": "vite@5.4.2",
+          "vite-node": "vite-node@1.6.0"
         }
       },
       "@vanilla-extract/private@1.0.6": {
@@ -2603,10 +2637,6 @@
         "integrity": "sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==",
         "dependencies": {}
       },
-      "mime@3.0.0": {
-        "integrity": "sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==",
-        "dependencies": {}
-      },
       "mimic-fn@2.1.0": {
         "integrity": "sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==",
         "dependencies": {}
@@ -3842,29 +3872,28 @@
           "vfile-message": "vfile-message@3.1.4"
         }
       },
-      "vite-node@1.6.0_@types+node@18.16.19": {
+      "vite-node@1.6.0": {
         "integrity": "sha512-de6HJgzC+TFzOu0NTC4RAIsyf/DY/ibWDYQUcuEA84EMHhcefTUGkjFHKKEJhQN4A+6I0u++kr3l36ZF2d7XRw==",
         "dependencies": {
           "cac": "cac@6.7.14",
           "debug": "debug@4.3.6",
           "pathe": "pathe@1.1.2",
           "picocolors": "picocolors@1.0.1",
-          "vite": "vite@5.4.2_@types+node@18.16.19"
+          "vite": "vite@5.4.2"
         }
       },
-      "vite-tsconfig-paths@5.0.1_vite@5.4.2__@types+node@18.16.19_@types+node@18.16.19": {
+      "vite-tsconfig-paths@5.0.1_vite@5.4.2": {
         "integrity": "sha512-yqwv+LstU7NwPeNqajZzLEBVpUFU6Dugtb2P84FXuvaoYA+/70l9MHE+GYfYAycVyPSDYZ7mjOFuYBRqlEpTig==",
         "dependencies": {
           "debug": "debug@4.3.6",
           "globrex": "globrex@0.1.2",
           "tsconfck": "tsconfck@3.1.1",
-          "vite": "vite@5.4.2_@types+node@18.16.19"
+          "vite": "vite@5.4.2"
         }
       },
-      "vite@5.4.2_@types+node@18.16.19": {
+      "vite@5.4.2": {
         "integrity": "sha512-dDrQTRHp5C1fTFzcSaMxjk6vdpKvT+2/mIdE07Gw2ykehT49O0z/VHS3zZ8iV/Gh8BJJKHWOe5RjaNrW5xf/GA==",
         "dependencies": {
-          "@types/node": "@types/node@18.16.19",
           "esbuild": "esbuild@0.21.5",
           "fsevents": "fsevents@2.3.3",
           "postcss": "postcss@8.4.41",
@@ -3960,31 +3989,11 @@
       }
     }
   },
-  "remote": {
-    "https://deno.land/std@0.128.0/_util/assert.ts": "e94f2eb37cebd7f199952e242c77654e43333c1ac4c5c700e929ea3aa5489f74",
-    "https://deno.land/std@0.128.0/_util/os.ts": "49b92edea1e82ba295ec946de8ffd956ed123e2948d9bd1d3e901b04e4307617",
-    "https://deno.land/std@0.128.0/path/_constants.ts": "df1db3ffa6dd6d1252cc9617e5d72165cd2483df90e93833e13580687b6083c3",
-    "https://deno.land/std@0.128.0/path/_interface.ts": "ee3b431a336b80cf445441109d089b70d87d5e248f4f90ff906820889ecf8d09",
-    "https://deno.land/std@0.128.0/path/_util.ts": "c1e9686d0164e29f7d880b2158971d805b6e0efc3110d0b3e24e4b8af2190d2b",
-    "https://deno.land/std@0.128.0/path/common.ts": "bee563630abd2d97f99d83c96c2fa0cca7cee103e8cb4e7699ec4d5db7bd2633",
-    "https://deno.land/std@0.128.0/path/glob.ts": "cb5255638de1048973c3e69e420c77dc04f75755524cb3b2e160fe9277d939ee",
-    "https://deno.land/std@0.128.0/path/mod.ts": "4275129bb766f0e475ecc5246aa35689eeade419d72a48355203f31802640be7",
-    "https://deno.land/std@0.128.0/path/posix.ts": "663e4a6fe30a145f56aa41a22d95114c4c5582d8b57d2d7c9ed27ad2c47636bb",
-    "https://deno.land/std@0.128.0/path/separator.ts": "fe1816cb765a8068afb3e8f13ad272351c85cbc739af56dacfc7d93d710fe0f9",
-    "https://deno.land/std@0.128.0/path/win32.ts": "e7bdf63e8d9982b4d8a01ef5689425c93310ece950e517476e22af10f41a136e",
-    "https://esm.sh/@remix-run/deno@2.11.2": "b37ea6c60f15da5c538dcf90afbe5b600096f4eb9fbd259a0d84535bca99caaf",
-    "https://esm.sh/v135/@remix-run/deno@2.11.2/denonext/deno.mjs": "e8cbc1716ed5acd1c872a67198d542b77834e4d1bc0a6d077ed90ef4a5b8f03f",
-    "https://esm.sh/v135/@remix-run/router@1.19.1/denonext/router.mjs": "011812da92135cd45c55d439440510e3aecc0b3e8dee5965fc27db7f118a3b12",
-    "https://esm.sh/v135/@remix-run/server-runtime@2.11.2/denonext/server-runtime.mjs": "947cf9fcefeda6ea94b0085480f4b57a21a4e778310f9acf919cc6fbad0f7d62",
-    "https://esm.sh/v135/@web3-storage/multipart-parser@1.0.0/denonext/multipart-parser.mjs": "061354aadbf549638f6d92e9f9c54adb5e82cb8e3e8320030cc78a52d21b25d4",
-    "https://esm.sh/v135/cookie@0.6.0/denonext/cookie.mjs": "688128a8a735ce2a9f09fba0051d6f4f7230fd9816a353f5dc75ac40defc1e79",
-    "https://esm.sh/v135/mime@3.0.0/denonext/mime.mjs": "7fe83d762ec6d1bac50893acc45af4ff52d5ad0176959c4bc48ae0cde77ab50f",
-    "https://esm.sh/v135/set-cookie-parser@2.6.0/denonext/set-cookie-parser.mjs": "cd71b512f7bc0a5f8ca55e8b125d9f3efde896b81a6cbb6827b01af8259b5007",
-    "https://esm.sh/v135/turbo-stream@2.3.0/denonext/turbo-stream.mjs": "aecba652d3217195f5019988f8b55aeb4db09e5a8162f1864c31b39e322b7eba"
-  },
+  "remote": {},
   "workspace": {
     "dependencies": [
-      "npm:@remix-run/deno@^2.11.2",
+      "jsr:@std/http@^1.0.4",
+      "jsr:@std/path@^1.0.3",
       "npm:@remix-run/dev@^2.11.2",
       "npm:@remix-run/express@^2.11.2",
       "npm:@remix-run/react@^2.11.2",
