@@ -22,7 +22,6 @@
       "npm:react@^18.3.1": "npm:react@18.3.1",
       "npm:tailwindcss@^3.4.10": "npm:tailwindcss@3.4.10_postcss@8.4.41",
       "npm:typescript@^5.5.4": "npm:typescript@5.5.4",
-      "npm:vite-tsconfig-paths@^5.0.1": "npm:vite-tsconfig-paths@5.0.1_vite@5.4.2",
       "npm:vite@^5.4.2": "npm:vite@5.4.2"
     },
     "jsr": {
@@ -1811,10 +1810,6 @@
       },
       "globals@11.12.0": {
         "integrity": "sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==",
-        "dependencies": {}
-      },
-      "globrex@0.1.2": {
-        "integrity": "sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==",
         "dependencies": {}
       },
       "gopd@1.0.1": {
@@ -3685,10 +3680,6 @@
         "integrity": "sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==",
         "dependencies": {}
       },
-      "tsconfck@3.1.1": {
-        "integrity": "sha512-00eoI6WY57SvZEVjm13stEVE90VkEdJAFGgpFLTsZbJyW/LwFQ7uQxJHWpZ2hzSWgCPKc9AnBnNP+0X7o3hAmQ==",
-        "dependencies": {}
-      },
       "tsconfig-paths@4.2.0": {
         "integrity": "sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==",
         "dependencies": {
@@ -3882,15 +3873,6 @@
           "vite": "vite@5.4.2"
         }
       },
-      "vite-tsconfig-paths@5.0.1_vite@5.4.2": {
-        "integrity": "sha512-yqwv+LstU7NwPeNqajZzLEBVpUFU6Dugtb2P84FXuvaoYA+/70l9MHE+GYfYAycVyPSDYZ7mjOFuYBRqlEpTig==",
-        "dependencies": {
-          "debug": "debug@4.3.6",
-          "globrex": "globrex@0.1.2",
-          "tsconfck": "tsconfck@3.1.1",
-          "vite": "vite@5.4.2"
-        }
-      },
       "vite@5.4.2": {
         "integrity": "sha512-dDrQTRHp5C1fTFzcSaMxjk6vdpKvT+2/mIdE07Gw2ykehT49O0z/VHS3zZ8iV/Gh8BJJKHWOe5RjaNrW5xf/GA==",
         "dependencies": {
@@ -4006,7 +3988,6 @@
       "npm:react@^18.3.1",
       "npm:tailwindcss@^3.4.10",
       "npm:typescript@^5.5.4",
-      "npm:vite-tsconfig-paths@^5.0.1",
       "npm:vite@^5.4.2"
     ]
   }
