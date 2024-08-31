@@ -1,4 +1,5 @@
 {
-  "deno.enablePaths": ["deno.jsonc", "deno.lock", "server/"],
+  "deno.disablePaths": ["app/", "build/"],
+  "deno.enable": true,
   "deno.lint": true
 }
