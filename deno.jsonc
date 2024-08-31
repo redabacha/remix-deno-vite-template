@@ -6,7 +6,7 @@
     "lint": "deno lint && deno run -A npm:eslint@^8.57.0 --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "deno serve -A --parallel ./server/production.ts",
     "typecheck": "deno check '**/*' && deno run -A npm:typescript@^5.5.4/tsc",
-    "typegen": "deno types > app/deno.d.ts"
+    "typegen": "deno types > ./app/deno.d.ts"
   },
   "exclude": [
     "app/",
