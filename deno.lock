@@ -6,21 +6,16 @@
       "jsr:@std/encoding@^1.0.3": "jsr:@std/encoding@1.0.3",
       "jsr:@std/fmt@^1.0.1": "jsr:@std/fmt@1.0.1",
       "jsr:@std/http@^1.0.4": "jsr:@std/http@1.0.4",
-      "jsr:@std/json@^1.0.0": "jsr:@std/json@1.0.0",
-      "jsr:@std/jsonc@^1.0.1": "jsr:@std/jsonc@1.0.1",
       "jsr:@std/media-types@^1.0.3": "jsr:@std/media-types@1.0.3",
       "jsr:@std/net@^1.0.1": "jsr:@std/net@1.0.1",
       "jsr:@std/path@^1.0.3": "jsr:@std/path@1.0.3",
       "jsr:@std/streams@^1.0.3": "jsr:@std/streams@1.0.3",
-      "npm:@npmcli/package-json@^5.2.0": "npm:@npmcli/package-json@5.2.0",
       "npm:@remix-run/dev@^2.11.2": "npm:@remix-run/dev@2.11.2_@remix-run+react@2.11.2__react@18.3.1__react-dom@18.3.1___react@18.3.1__typescript@5.5.4_typescript@5.5.4_vite@5.4.2__@types+node@22.5.1_@babel+core@7.25.2_react@18.3.1_react-dom@18.3.1__react@18.3.1_postcss@8.4.41_@types+node@22.5.1",
       "npm:@remix-run/express@^2.11.2": "npm:@remix-run/express@2.11.2_express@4.19.2_typescript@5.5.4",
       "npm:@remix-run/react@^2.11.2": "npm:@remix-run/react@2.11.2_react@18.3.1_react-dom@18.3.1__react@18.3.1_typescript@5.5.4",
       "npm:@remix-run/server-runtime@^2.11.2": "npm:@remix-run/server-runtime@2.11.2_typescript@5.5.4",
       "npm:@types/express@^4.17.21": "npm:@types/express@4.17.21",
       "npm:@types/node@^22.5.1": "npm:@types/node@22.5.1",
-      "npm:@types/npmcli__package-json@4.0.4": "npm:@types/npmcli__package-json@4.0.4",
-      "npm:@types/npmcli__package-json@^4.0.4": "npm:@types/npmcli__package-json@4.0.4",
       "npm:@types/react-dom@^18.3.0": "npm:@types/react-dom@18.3.0",
       "npm:@types/react@^18.3.5": "npm:@types/react@18.3.5",
       "npm:@typescript-eslint/eslint-plugin@^8.3.0": "npm:@typescript-eslint/eslint-plugin@8.3.0_@typescript-eslint+parser@8.3.0__eslint@8.57.0__typescript@5.5.4_eslint@8.57.0_typescript@5.5.4",
@@ -62,15 +57,6 @@
           "jsr:@std/net@^1.0.1",
           "jsr:@std/path@^1.0.3",
           "jsr:@std/streams@^1.0.3"
-        ]
-      },
-      "@std/json@1.0.0": {
-        "integrity": "985c1e544918d42e4e84072fc739ac4a19c3a5093292c99742ffcdd03fb6a268"
-      },
-      "@std/jsonc@1.0.1": {
-        "integrity": "6b36956e2a7cbb08ca5ad7fbec72e661e6217c202f348496ea88747636710dda",
-        "dependencies": [
-          "jsr:@std/json@^1.0.0"
         ]
       },
       "@std/media-types@1.0.3": {
@@ -774,20 +760,6 @@
           "which": "which@3.0.1"
         }
       },
-      "@npmcli/git@5.0.8": {
-        "integrity": "sha512-liASfw5cqhjNW9UFd+ruwwdEf/lbOAQjLL2XY2dFW/bkJheXDYZgOyul/4gVvEV4BWkTXjYGmDqMw9uegdbJNQ==",
-        "dependencies": {
-          "@npmcli/promise-spawn": "@npmcli/promise-spawn@7.0.2",
-          "ini": "ini@4.1.3",
-          "lru-cache": "lru-cache@10.4.3",
-          "npm-pick-manifest": "npm-pick-manifest@9.1.0",
-          "proc-log": "proc-log@4.2.0",
-          "promise-inflight": "promise-inflight@1.0.1",
-          "promise-retry": "promise-retry@2.0.1",
-          "semver": "semver@7.6.3",
-          "which": "which@4.0.0"
-        }
-      },
       "@npmcli/package-json@4.0.1": {
         "integrity": "sha512-lRCEGdHZomFsURroh522YvA/2cVb9oPIJrjHanCJZkiasz1BzcnLr3tBJhlV7S86MBJBuAQ33is2D60YitZL2Q==",
         "dependencies": {
@@ -800,28 +772,10 @@
           "semver": "semver@7.6.3"
         }
       },
-      "@npmcli/package-json@5.2.0": {
-        "integrity": "sha512-qe/kiqqkW0AGtvBjL8TJKZk/eBBSpnJkUWvHdQ9jM2lKHXRYYJuyNpJPlJw3c8QjC2ow6NZYiLExhUaeJelbxQ==",
-        "dependencies": {
-          "@npmcli/git": "@npmcli/git@5.0.8",
-          "glob": "glob@10.4.5",
-          "hosted-git-info": "hosted-git-info@7.0.2",
-          "json-parse-even-better-errors": "json-parse-even-better-errors@3.0.2",
-          "normalize-package-data": "normalize-package-data@6.0.2",
-          "proc-log": "proc-log@4.2.0",
-          "semver": "semver@7.6.3"
-        }
-      },
       "@npmcli/promise-spawn@6.0.2": {
         "integrity": "sha512-gGq0NJkIGSwdbUt4yhdF8ZrmkGKVz9vAdVzpOfnom+V8PLSmSOVhZwbNvZZS1EYcJN5hzzKBxmmVVAInM6HQLg==",
         "dependencies": {
           "which": "which@3.0.1"
-        }
-      },
-      "@npmcli/promise-spawn@7.0.2": {
-        "integrity": "sha512-xhfYPXoV5Dy4UkY0D+v2KkwvnDfiA/8Mt3sWCGI/hM03NsYIH8ZaG6QzS9x7pje5vHZBZJ2v6VRFVTWACnqcmQ==",
-        "dependencies": {
-          "which": "which@4.0.0"
         }
       },
       "@pkgjs/parseargs@0.11.0": {
@@ -1140,10 +1094,6 @@
         "dependencies": {
           "undici-types": "undici-types@6.19.8"
         }
-      },
-      "@types/npmcli__package-json@4.0.4": {
-        "integrity": "sha512-6QjlFUSHBmZJWuC08bz1ZCx6tm4t+7+OJXAdvM6tL2pI7n6Bh5SIp/YxQvnOLFf8MzCXs2ijyFgrzaiu1UFBGA==",
-        "dependencies": {}
       },
       "@types/prop-types@15.7.12": {
         "integrity": "sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==",
@@ -2920,12 +2870,6 @@
           "lru-cache": "lru-cache@7.18.3"
         }
       },
-      "hosted-git-info@7.0.2": {
-        "integrity": "sha512-puUZAUKT5m8Zzvs72XWy3HtvVbTWljRE66cP60bxJzAqf2DgICo7lYTY2IHUmLnNpjYvw5bvmoHvPc0QO2a62w==",
-        "dependencies": {
-          "lru-cache": "lru-cache@10.4.3"
-        }
-      },
       "http-errors@2.0.0": {
         "integrity": "sha512-FtwrG/euBzaEjYeRqOgly7G0qviiXoJWnvEH2Z1plBdXgbyjv34pHTSb9zoeHMyDy33+DWy5Wt9Wo+TURtOYSQ==",
         "dependencies": {
@@ -2984,10 +2928,6 @@
       },
       "inherits@2.0.4": {
         "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
-        "dependencies": {}
-      },
-      "ini@4.1.3": {
-        "integrity": "sha512-X7rqawQBvfdjS10YU1y1YVreA3SsLrW9dX2CewP2EbBJM4ypVNLDkO5y04gejPwKIY9lR+7r9gn3rFPt/kmWFg==",
         "dependencies": {}
       },
       "inline-style-parser@0.1.1": {
@@ -3244,10 +3184,6 @@
       },
       "isexe@2.0.0": {
         "integrity": "sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==",
-        "dependencies": {}
-      },
-      "isexe@3.1.1": {
-        "integrity": "sha512-LpB/54B+/2J5hqQ7imZHfdU31OlgQqx7ZicVlkm9kzg9/w8GKLEcFfJl/t7DCEDueOyBAD6zCCwTO6Fzs0NoEQ==",
         "dependencies": {}
       },
       "iterator.prototype@1.1.2": {
@@ -4010,14 +3946,6 @@
           "validate-npm-package-license": "validate-npm-package-license@3.0.4"
         }
       },
-      "normalize-package-data@6.0.2": {
-        "integrity": "sha512-V6gygoYb/5EmNI+MEGrWkC+e6+Rr7mTmfHrxDbLzxQogBkgzo76rkok0Am6thgSF7Mv2nLOajAJj5vDJZEFn7g==",
-        "dependencies": {
-          "hosted-git-info": "hosted-git-info@7.0.2",
-          "semver": "semver@7.6.3",
-          "validate-npm-package-license": "validate-npm-package-license@3.0.4"
-        }
-      },
       "normalize-path@3.0.0": {
         "integrity": "sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==",
         "dependencies": {}
@@ -4045,30 +3973,12 @@
           "validate-npm-package-name": "validate-npm-package-name@5.0.1"
         }
       },
-      "npm-package-arg@11.0.3": {
-        "integrity": "sha512-sHGJy8sOC1YraBywpzQlIKBE4pBbGbiF95U6Auspzyem956E0+FtDtsx1ZxlOJkQCZ1AFXAY/yuvtFYrOxF+Bw==",
-        "dependencies": {
-          "hosted-git-info": "hosted-git-info@7.0.2",
-          "proc-log": "proc-log@4.2.0",
-          "semver": "semver@7.6.3",
-          "validate-npm-package-name": "validate-npm-package-name@5.0.1"
-        }
-      },
       "npm-pick-manifest@8.0.2": {
         "integrity": "sha512-1dKY+86/AIiq1tkKVD3l0WI+Gd3vkknVGAggsFeBkTvbhMQ1OND/LKkYv4JtXPKUJ8bOTCyLiqEg2P6QNdK+Gg==",
         "dependencies": {
           "npm-install-checks": "npm-install-checks@6.3.0",
           "npm-normalize-package-bin": "npm-normalize-package-bin@3.0.1",
           "npm-package-arg": "npm-package-arg@10.1.0",
-          "semver": "semver@7.6.3"
-        }
-      },
-      "npm-pick-manifest@9.1.0": {
-        "integrity": "sha512-nkc+3pIIhqHVQr085X9d2JzPzLyjzQS96zbruppqC9aZRm/x8xx6xhI98gHtsfELP2bE+loHq8ZaHFHhe+NauA==",
-        "dependencies": {
-          "npm-install-checks": "npm-install-checks@6.3.0",
-          "npm-normalize-package-bin": "npm-normalize-package-bin@3.0.1",
-          "npm-package-arg": "npm-package-arg@11.0.3",
           "semver": "semver@7.6.3"
         }
       },
@@ -4437,10 +4347,6 @@
       },
       "proc-log@3.0.0": {
         "integrity": "sha512-++Vn7NS4Xf9NacaU9Xq3URUuqZETPsf8L4j5/ckhaRYsfPeRyzGw+iDjFhV/Jr3uNmTvvddEJFWh5R1gRgUH8A==",
-        "dependencies": {}
-      },
-      "proc-log@4.2.0": {
-        "integrity": "sha512-g8+OnU/L2v+wyiVK+D5fA34J7EH8jZ8DDlvwhRCMxmMj7UCBvxiO1mGeN+36JXIKF4zevU4kRBd8lVgG9vLelA==",
         "dependencies": {}
       },
       "process-nextick-args@2.0.1": {
@@ -5579,12 +5485,6 @@
           "isexe": "isexe@2.0.0"
         }
       },
-      "which@4.0.0": {
-        "integrity": "sha512-GlaYyEb07DPxYCKhKzplCWBJtvxZcZMrL+4UkrTSJHHPyZU4mYYTv3qaOe77H7EODLSSopAUFAc6W8U4yqvscg==",
-        "dependencies": {
-          "isexe": "isexe@3.1.1"
-        }
-      },
       "word-wrap@1.2.5": {
         "integrity": "sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==",
         "dependencies": {}
@@ -5643,16 +5543,13 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/http@^1.0.4",
-      "jsr:@std/jsonc@^1.0.1",
       "jsr:@std/path@^1.0.3",
-      "npm:@npmcli/package-json@^5.2.0",
       "npm:@remix-run/dev@^2.11.2",
       "npm:@remix-run/express@^2.11.2",
       "npm:@remix-run/react@^2.11.2",
       "npm:@remix-run/server-runtime@^2.11.2",
       "npm:@types/express@^4.17.21",
       "npm:@types/node@^22.5.1",
-      "npm:@types/npmcli__package-json@^4.0.4",
       "npm:@types/react-dom@^18.3.0",
       "npm:@types/react@^18.3.5",
       "npm:@typescript-eslint/eslint-plugin@^8.3.0",
