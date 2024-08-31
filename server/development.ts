@@ -19,7 +19,6 @@ app.all(
       viteDevServer.ssrLoadModule(
         "virtual:remix/server-build",
       ) as Promise<ServerBuild>,
-    getLoadContext: () => ({}),
     mode: "development",
   }),
 );

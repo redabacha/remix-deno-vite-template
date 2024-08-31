@@ -1,4 +1,8 @@
-import type { MetaFunction } from "@remix-run/react";
+import { useLoaderData, type MetaFunction } from "@remix-run/react";
+
+export const loader = () => {
+  return { denoVersion: Deno.version };
+};
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,9 +12,11 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const { denoVersion } = useLoaderData<typeof loader>();
+
   return (
     <div className="font-sans p-4">
-      <h1 className="text-3xl">Welcome to Remix on Deno</h1>
+      <h1 className="text-3xl">Welcome to Remix on Deno v{denoVersion.deno}</h1>
       <ul className="list-disc mt-4 pl-6 space-y-2">
         <li>
           <a

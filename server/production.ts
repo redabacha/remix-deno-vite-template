@@ -37,6 +37,6 @@ export default {
       }
     }
 
-    return handleRequest(request, {/* loadContext */});
+    return handleRequest(request);
   },
 } satisfies Deno.ServeDefaultExport;
