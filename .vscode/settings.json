@@ -1,4 +1,5 @@
 {
+  "deno.disablePaths": ["app/", "build/"],
   "deno.enable": true,
   "deno.lint": true,
   "editor.defaultFormatter": "denoland.vscode-deno"

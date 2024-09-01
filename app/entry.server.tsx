@@ -16,15 +16,12 @@ export default async function handleRequest(
   remixContext: EntryContext,
   // This is ignored so we can keep it in the template for visibility.  Feel
   // free to delete this parameter in your app if you're not using it!
-  // deno-lint-ignore no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   loadContext: AppLoadContext,
 ) {
   const body = await renderToReadableStream(
     <RemixServer context={remixContext} url={request.url} />,
     {
-      // Deno seems to encounter 'TypeError: Closed already requested.' on every request when this abort signal is passed.
-      // I believe this is due to Deno v1.43+ always aborting requests once the response is complete which conflicts with SSR also aborting the same signal, https://deno.com/blog/v1.43#response-completion.
-      // signal: request.signal,
       onError(error: unknown) {
         // Log streaming rendering errors from inside the shell
         console.error(error);

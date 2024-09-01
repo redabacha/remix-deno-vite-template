@@ -3,7 +3,7 @@ import { serveFile } from "@std/http/file-server";
 import { join } from "@std/path/join";
 
 const handleRequest = createRequestHandler(
-  await import("./build/server/index.js"),
+  await import("../build/server/index.js"),
   "production",
 );
 
@@ -37,6 +37,6 @@ export default {
       }
     }
 
-    return handleRequest(request, {/* loadContext */});
+    return handleRequest(request);
   },
 } satisfies Deno.ServeDefaultExport;
