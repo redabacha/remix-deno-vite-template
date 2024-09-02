@@ -5,13 +5,6 @@ This is a fork from the
 template which modernizes it to use Remix v2 with Vite and no dependency on
 Node.js, only [Deno](https://deno.com/).
 
-There are two servers:
-
-- `server.dev.ts`: used in development, it pairs the vite dev server in
-  middleware mode with express (so HMR works out of the box)
-- `server.prod.ts`: used in production, it is served by `deno serve` for maximum
-  performance
-
 This template has been tested with Deno v1.46.1.
 
 Live deployment: https://huge-badger-89.deno.dev/
