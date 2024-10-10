@@ -5,7 +5,7 @@ This is a fork from the
 template which modernizes it to use Remix v2 with Vite and no dependency on
 Node.js, only [Deno](https://deno.com/).
 
-This template has been tested with Deno v1.46.1.
+This template has been tested with Deno v2.0.0.
 
 Live deployment: https://huge-badger-89.deno.dev/
 
@@ -81,13 +81,13 @@ deploying to [Deno Deploy](https://deno.com/deploy).
 
 2. [Create a new Deno Deploy project](https://dash.deno.com/new) for this app.
 
-3. Replace `<your deno deploy project>` in the `deploy` script in `package.json`
+3. Replace `<your deno deploy project>` in the `deploy` script in `deno.json`
    with your Deno Deploy project name:
 
-```json filename=package.json
+```json filename=deno.json
 {
-  "scripts": {
-    "deploy": "deployctl deploy --project=<your deno deploy project> --include=build,server-prod.ts ./server.prod.ts"
+  "tasks": {
+    "deploy": "deployctl deploy --prod --include=deno.json,deno.lock,build,server --project=<your deno deploy project> ./server.production.ts"
   }
 }
 ```
@@ -108,7 +108,7 @@ GitHub secret.
    [`deployctl`](https://github.com/denoland/deployctl):
 
 ```sh
-deno install -Arf jsr:@deno/deployctl
+deno install -Arfg jsr:@deno/deployctl
 ```
 
 6. If you have previously installed the Deno Deploy CLI, you should update it to
