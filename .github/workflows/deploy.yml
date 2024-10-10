@@ -23,6 +23,9 @@ jobs:
         with:
           deno-version: v2.x
 
+      - name: Install dependencies
+        run: "deno install"
+
       - name: Build step
         run: "deno task build"
 
@@ -33,7 +36,7 @@ jobs:
           entrypoint: "server.production.ts"
           root: ""
           include: |
-            deno.jsonc
+            deno.json
             deno.lock
             build
             server.production.ts
