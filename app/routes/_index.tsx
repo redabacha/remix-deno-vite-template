@@ -1,7 +1,12 @@
-import { useLoaderData, type MetaFunction } from "@remix-run/react";
+import { type MetaFunction, useLoaderData } from "@remix-run/react";
+import { toKebabCase } from "@std/text";
+import { textToTransform } from "~/textToTransform.ts";
 
 export const loader = () => {
-  return { denoVersion: Deno.version };
+  return {
+    denoVersion: Deno.version,
+    sampleText: toKebabCase(textToTransform),
+  };
 };
 
 export const meta: MetaFunction = () => {
@@ -12,7 +17,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const { denoVersion } = useLoaderData<typeof loader>();
+  const { denoVersion, sampleText } = useLoaderData<typeof loader>();
 
   return (
     <div className="font-sans p-4">
@@ -20,6 +25,7 @@ export default function Index() {
         Welcome to Remix on Deno{" "}
         {denoVersion.deno ? `v${denoVersion.deno}` : "Deploy"}
       </h1>
+      <h2>{sampleText}</h2>
       <ul className="list-disc mt-4 pl-6 space-y-2">
         <li>
           <a

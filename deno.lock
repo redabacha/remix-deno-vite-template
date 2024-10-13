@@ -10,6 +10,8 @@
     "jsr:@std/path@^1.0.3": "1.0.6",
     "jsr:@std/path@^1.0.6": "1.0.6",
     "jsr:@std/streams@^1.0.6": "1.0.6",
+    "jsr:@std/text@^1.0.7": "1.0.7",
+    "npm:@deno/vite-plugin@1": "1.0.0_vite@5.4.8__@types+node@22.7.5_@types+node@22.7.5",
     "npm:@remix-run/dev@*": "2.12.1_@remix-run+react@2.12.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__typescript@5.6.3_typescript@5.6.3_vite@5.4.8__@types+node@22.7.5_@babel+core@7.25.7_react@18.3.1_react-dom@18.3.1__react@18.3.1_esbuild@0.17.6_postcss@8.4.47_@types+node@22.7.5",
     "npm:@remix-run/react@*": "2.12.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_typescript@5.6.3",
     "npm:@remix-run/server-runtime@*": "2.12.1_typescript@5.6.3",
@@ -33,7 +35,6 @@
     "npm:react@^18.3.1": "18.3.1",
     "npm:tailwindcss@^3.4.10": "3.4.13_postcss@8.4.47",
     "npm:typescript@^5.5.4": "5.6.3",
-    "npm:vite-tsconfig-paths@^5.0.1": "5.0.1_vite@5.4.8__@types+node@22.7.5_typescript@5.6.3_@types+node@22.7.5",
     "npm:vite@^5.4.2": "5.4.8_@types+node@22.7.5"
   },
   "jsr": {
@@ -69,6 +70,9 @@
     },
     "@std/streams@1.0.6": {
       "integrity": "022ed94e380d06b4d91c49eb70241b7289ab78b8c2b4c4bbb7eb265e4997c25c"
+    },
+    "@std/text@1.0.7": {
+      "integrity": "344a820af99fde81ae1d4f9ce586da3f47a58cda25ac4c4dd688166cf5ed97f1"
     }
   },
   "npm": {
@@ -321,6 +325,12 @@
         "@babel/helper-string-parser",
         "@babel/helper-validator-identifier",
         "to-fast-properties"
+      ]
+    },
+    "@deno/vite-plugin@1.0.0_vite@5.4.8__@types+node@22.7.5_@types+node@22.7.5": {
+      "integrity": "sha512-Q9UeWqs3s7B5lqzu1Z5QrzYAzqTj3+F9YW17tWobGRbT2G40ihwis6zK/+QgMgcG4fm3IqdIfXmpQYhkZpdMfw==",
+      "dependencies": [
+        "vite"
       ]
     },
     "@emotion/hash@0.9.2": {
@@ -2454,9 +2464,6 @@
         "define-properties",
         "gopd"
       ]
-    },
-    "globrex@0.1.2": {
-      "integrity": "sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg=="
     },
     "gopd@1.0.1": {
       "integrity": "sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==",
@@ -4627,12 +4634,6 @@
     "ts-interface-checker@0.1.13": {
       "integrity": "sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA=="
     },
-    "tsconfck@3.1.3_typescript@5.6.3": {
-      "integrity": "sha512-ulNZP1SVpRDesxeMLON/LtWM8HIgAJEIVpVVhBM6gsmvQ8+Rh+ZG7FWGvHh7Ah3pRABwVJWklWCr/BTZSv0xnQ==",
-      "dependencies": [
-        "typescript"
-      ]
-    },
     "tsconfig-paths@3.15.0": {
       "integrity": "sha512-2Ac2RgzDe/cn48GvOe3M+o82pEFewD3UPbyoUHHdKasHwJKjds4fLXWf/Ux5kATBKN20oaFGu+jbElp1pos0mg==",
       "dependencies": [
@@ -4887,15 +4888,6 @@
         "vite"
       ]
     },
-    "vite-tsconfig-paths@5.0.1_vite@5.4.8__@types+node@22.7.5_typescript@5.6.3_@types+node@22.7.5": {
-      "integrity": "sha512-yqwv+LstU7NwPeNqajZzLEBVpUFU6Dugtb2P84FXuvaoYA+/70l9MHE+GYfYAycVyPSDYZ7mjOFuYBRqlEpTig==",
-      "dependencies": [
-        "debug@4.3.7",
-        "globrex",
-        "tsconfck",
-        "vite"
-      ]
-    },
     "vite@5.4.8_@types+node@22.7.5": {
       "integrity": "sha512-FqrItQ4DT1NC4zCUqMB4c4AZORMKIa0m8/URVCZ77OZ/QSNeJ54bU1vrFADbDsuwfIPcgknRkmqakQcgnL4GiQ==",
       "dependencies": [
@@ -5028,6 +5020,8 @@
     "dependencies": [
       "jsr:@std/http@^1.0.4",
       "jsr:@std/path@^1.0.3",
+      "jsr:@std/text@^1.0.7",
+      "npm:@deno/vite-plugin@1",
       "npm:@remix-run/dev@*",
       "npm:@remix-run/react@*",
       "npm:@remix-run/server-runtime@*",
@@ -5051,7 +5045,6 @@
       "npm:react@^18.3.1",
       "npm:tailwindcss@^3.4.10",
       "npm:typescript@^5.5.4",
-      "npm:vite-tsconfig-paths@^5.0.1",
       "npm:vite@^5.4.2"
     ]
   }

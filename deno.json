@@ -8,17 +8,23 @@
     "typecheck": "deno check '**/*' && deno run -A npm:typescript/tsc",
     "typegen": "deno types > ./app/deno.d.ts"
   },
-  "exclude": [
-    "app/",
-    "build/"
-  ],
+  "compilerOptions": {
+    "lib": ["deno.window", "dom"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "jsxImportSourceTypes": "@types/react"
+  },
+  "exclude": ["build/"],
   "nodeModulesDir": "manual",
   "imports": {
+    "~/": "./app/",
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",
     "@remix-run/dev": "npm:@remix-run/dev@*",
     "@remix-run/react": "npm:@remix-run/react@*",
     "@remix-run/server-runtime": "npm:@remix-run/server-runtime@*",
     "@std/http": "jsr:@std/http@^1.0.4",
     "@std/path": "jsr:@std/path@^1.0.3",
+    "@std/text": "jsr:@std/text@^1.0.7",
     "@types/express": "npm:@types/express@^4.17.21",
     "@types/node": "npm:@types/node@^22.5.1",
     "@types/react": "npm:@types/react@^18.3.5",
@@ -39,7 +45,6 @@
     "react-dom": "npm:react-dom@^18.3.1",
     "tailwindcss": "npm:tailwindcss@^3.4.10",
     "typescript": "npm:typescript@^5.5.4",
-    "vite": "npm:vite@^5.4.2",
-    "vite-tsconfig-paths": "npm:vite-tsconfig-paths@^5.0.1"
+    "vite": "npm:vite@^5.4.2"
   }
 }
