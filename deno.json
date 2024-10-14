@@ -16,15 +16,14 @@
   "exclude": ["build/"],
   "nodeModulesDir": "manual",
   "imports": {
-    "~/": "./app/",
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",
+    "@redabacha/eslint-import-resolver-deno": "npm:@redabacha/eslint-import-resolver-deno@^1.0.1",
     "@remix-run/dev": "npm:@remix-run/dev@*",
     "@remix-run/react": "npm:@remix-run/react@*",
     "@remix-run/server-runtime": "npm:@remix-run/server-runtime@*",
     "@std/http": "jsr:@std/http@^1.0.4",
     "@std/path": "jsr:@std/path@^1.0.3",
     "@std/text": "jsr:@std/text@^1.0.7",
-    "@types/express": "npm:@types/express@^4.17.21",
     "@types/node": "npm:@types/node@^22.5.1",
     "@types/react": "npm:@types/react@^18.3.5",
     "@types/react-dom": "npm:@types/react-dom@^18.3.0",
@@ -32,7 +31,6 @@
     "@typescript-eslint/parser": "npm:@typescript-eslint/parser@^8.3.0",
     "autoprefixer": "npm:autoprefixer@^10.4.20",
     "eslint": "npm:eslint@^8.57.0",
-    "eslint-import-resolver-typescript": "npm:eslint-import-resolver-typescript@^3.6.3",
     "eslint-plugin-import": "npm:eslint-plugin-import@^2.29.1",
     "eslint-plugin-jsx-a11y": "npm:eslint-plugin-jsx-a11y@^6.9.0",
     "eslint-plugin-react": "npm:eslint-plugin-react@^7.35.0",
@@ -44,6 +42,7 @@
     "react-dom": "npm:react-dom@^18.3.1",
     "tailwindcss": "npm:tailwindcss@^3.4.10",
     "typescript": "npm:typescript@^5.5.4",
-    "vite": "npm:vite@^5.4.2"
+    "vite": "npm:vite@^5.4.2",
+    "~/": "./app/"
   }
 }
