@@ -41,7 +41,6 @@
     "react": "npm:react@^18.3.1",
     "react-dom": "npm:react-dom@^18.3.1",
     "tailwindcss": "npm:tailwindcss@^3.4.10",
-    "typescript": "npm:typescript@^5.5.4",
     "vite": "npm:vite@^5.4.2",
     "~/": "./app/"
   }
