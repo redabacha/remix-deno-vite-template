@@ -5,9 +5,19 @@ This is a fork from the
 template which modernizes it to use Remix v2 with Vite and no dependency on
 Node.js, only [Deno](https://deno.com/).
 
-This template has been tested with Deno v2.0.0.
+This template has been tested with Deno v2.0.0+.
+[Live deployment here](https://huge-badger-89.deno.dev/) hosted on
+[Deno Deploy](https://deno.com/deploy).
 
-Live deployment: https://huge-badger-89.deno.dev/
+## Using this template
+
+Run the following command:
+
+```zsh
+deno run -A npm:create-remix@latest --no-install --template redabacha/remix-deno-vite-template
+```
+
+And then run `deno install` in the created directory.
 
 # Remix + Deno
 

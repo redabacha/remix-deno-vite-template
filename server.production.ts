@@ -3,6 +3,7 @@ import { serveFile } from "@std/http/file-server";
 import { join } from "@std/path/join";
 
 const handleRequest = createRequestHandler(
+  // eslint-disable-next-line import/no-unresolved
   await import("./build/server/index.js"),
   "production",
 );
