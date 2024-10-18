@@ -39,4 +39,5 @@ jobs:
             deno.json
             deno.lock
             build
+            package.json
             server.production.ts
