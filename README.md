@@ -24,22 +24,17 @@ For more, check out the [Remix docs](https://remix.run/docs).
   ```ts
   import { useState } from "react";
   ```
-- ✅ You may use inlined URL imports, JSR imports or NPM imports for Deno
-  modules.
+- ✅ You may use inlined URL imports, JSR imports or NPM imports.
   ```ts
-  import { copy } from "https://deno.land/std@0.138.0/streams/conversion.ts";
+  import { pascalCase } from "https://deno.land/x/case/mod.ts";
   ```
-- ✅ You may use Deno and Node built-ins for both Deno modules and server-only
-  Remix code.
+- ✅ You may use Deno and Node built-ins on the server side.
   ```ts filename=app/entry.server.tsx
   Deno.env.get("DENO_DEPLOYMENT_ID");
   ```
   ```ts filename=app/entry.server.tsx
   import fs from "node:fs";
   ```
-- ✅ You may use
-  [import maps](https://docs.deno.com/runtime/manual/basics/import_maps) for
-  Deno modules.
 
 ## Development
 
