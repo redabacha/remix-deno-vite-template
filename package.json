@@ -1,1 +1,26 @@
-{}
+{
+  "dependencies": {
+    "@deno/vite-plugin": "^1.0.0",
+    "@redabacha/eslint-import-resolver-deno": "^1.0.1",
+    "@remix-run/dev": "*",
+    "@remix-run/react": "*",
+    "@remix-run/server-runtime": "*",
+    "@types/node": "^22.7.6",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.10.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.13.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "isbot": "^5.1.17",
+    "postcss": "^8.4.47",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.9"
+  }
+}
