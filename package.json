@@ -1,4 +1,5 @@
 {
+  "private": true,
   "dependencies": {
     "@deno/vite-plugin": "^1.0.0",
     "@redabacha/eslint-import-resolver-deno": "^1.0.1",
