@@ -13,7 +13,6 @@
     "@typescript-eslint/parser": "^8.10.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.1",
-    "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-react": "^7.37.1",
