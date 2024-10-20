@@ -5,15 +5,10 @@
     "dev": "deno run -A npm:@remix-run/dev vite:dev",
     "lint": "deno lint && deno run -A npm:eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "deno serve -A --parallel ./server.production.ts",
-    "typecheck": "deno check '**/*'"
+    "typecheck": "deno check '**/*' && deno run -A npm:typescript/tsc",
+    "typegen": "deno types > ./app/deno.d.ts"
   },
-  "compilerOptions": {
-    "lib": ["deno.window", "dom"],
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
-    "jsxImportSourceTypes": "@types/react"
-  },
-  "exclude": ["build/"],
+  "exclude": ["app/", "build/"],
   "nodeModulesDir": "auto",
   "imports": {
     "@std/http": "jsr:@std/http@^1.0.8",
