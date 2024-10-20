@@ -2,7 +2,7 @@
   "private": true,
   "dependencies": {
     "@deno/vite-plugin": "^1.0.0",
-    "@redabacha/eslint-import-resolver-deno": "^1.0.1",
+    "@redabacha/eslint-import-resolver-deno": "^1.1.0",
     "@remix-run/dev": "*",
     "@remix-run/react": "*",
     "@remix-run/server-runtime": "*",
