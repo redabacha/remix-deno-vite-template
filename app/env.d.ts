@@ -6,6 +6,6 @@ declare module "react-dom/server.browser" {
   export * from "react-dom/server";
 }
 
-// JSR packages must be declared manually as tsc isn't aware of deno imports
+// Imports from deno.json must be declared here manually as tsc isn't aware of them.
 // TODO: create a script to declare these modules based on deno.json with typings
 declare module '@std/text';

@@ -19,25 +19,27 @@ deno run -A npm:create-remix@latest --no-install --template redabacha/remix-deno
 
 And then run `deno install` in the created directory.
 
-## Using JSR/HTTPS imports
+## Using JSR and HTTPS imports
 
 Thanks to the [@deno/vite-plugin](https://github.com/denoland/deno-vite-plugin),
-it's possible to use packages from JSR and from HTTPS imports within the `app/`
-directory which will get included in the server or browser bundles as needed.
-This currently has a caveat where you need to manually declare the imports using
-the `declare module` syntax as
-[seen here](https://github.com/redabacha/remix-deno-template/tree/main/app/env.d.ts#L11)
-for example in order to convince the Typescript type checker it exists.
+it's possible to use packages from JSR and imports from HTTPS URLs (via the
+[deno.json `imports` field](https://docs.deno.com/runtime/fundamentals/modules/#managing-third-party-modules-and-libraries))
+within the `app/` directory which will get included in the server and/or browser
+bundles as needed. This currently has a caveat where you need to manually
+declare the imports using the `declare module` syntax as
+[seen here](./app/env.d.ts#L11) in order to convince the Typescript type checker
+it exists. This isn't necessary if the Deno type checker is used for the entire
+project.
 
-## Using only the Deno type checker
+## Using the Deno type checker for the entire project
 
 Currently the VSCode Deno extension has an issue with auto-import suggestions
 for npm packages which makes not fully ideal for development at the moment, see
 [this issue](https://github.com/denoland/vscode_deno/issues/1177) for more
 information. However
 [here's a working branch](https://github.com/redabacha/remix-deno-vite-template/tree/using-deno-typechecker)
-that uses only the Deno type checker for all files in the project with no
-dependency on typescript.
+that uses only the Deno type checker for all files with no direct dependency on
+typescript.
 
 # Remix + Deno
 
