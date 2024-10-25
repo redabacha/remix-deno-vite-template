@@ -8,4 +8,4 @@ declare module "react-dom/server.browser" {
 
 // Imports from deno.json must be declared here manually as tsc isn't aware of them.
 // TODO: create a script to declare these modules based on deno.json with typings
-declare module '@std/text';
+declare module "@std/text";
