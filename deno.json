@@ -11,7 +11,7 @@
   },
   "exclude": ["app/", "build/"],
   "fmt": { "exclude": ["!app/"] },
-  "nodeModulesDir": "auto",
+  "nodeModulesDir": "manual",
   "imports": {
     "@std/http": "jsr:@std/http@^1.0.8",
     "@std/path": "jsr:@std/path@^1.0.6",
