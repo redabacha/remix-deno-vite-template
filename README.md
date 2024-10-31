@@ -155,6 +155,12 @@ deno install -Arfg jsr:@deno/deployctl
 deployctl upgrade
 ```
 
+7. If you haven't already, run the `build` task to create production build:
+
+```sh
+deno task build
+```
+
 ### Deploying to Deno Deploy
 
 After you've set up Deno Deploy, run:
