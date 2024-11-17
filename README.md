@@ -27,12 +27,12 @@ it's possible to use packages from JSR and imports from HTTPS URLs (via the
 within the `app/` directory which will get included in the server and/or browser
 bundles as needed.
 
-## Using the Typescript type checker instead of Deno
+## Using the TypeScript type checker instead of Deno
 
 It is possible to use [typescript](https://www.npmjs.com/package/typescript)
 directly for type checking instead of the built-in Deno type checker. This may
-be useful if you need to use a newer Typescript version than Deno currently
-provides or if you have Typescript language server plugins that you'd like to
+be useful if you need to use a newer TypeScript version than Deno currently
+provides or if you have TypeScript language server plugins that you'd like to
 use.
 
 [Here's a working branch](https://github.com/redabacha/remix-deno-vite-template/tree/using-typescript-typechecker)
@@ -74,16 +74,6 @@ deno task dev
 ```
 
 This starts your app in development mode, rebuilding assets on file changes.
-
-## Typegen
-
-Generate types to use Deno APIs in server-only Remix code within `app/`:
-
-```sh
-deno task typegen
-```
-
-You should rerun typegen whenever you upgrade Deno version.
 
 ## Production
 
