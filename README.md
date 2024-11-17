@@ -25,11 +25,7 @@ Thanks to the [@deno/vite-plugin](https://github.com/denoland/deno-vite-plugin),
 it's possible to use packages from JSR and imports from HTTPS URLs (via the
 [deno.json `imports` field](https://docs.deno.com/runtime/fundamentals/modules/#managing-third-party-modules-and-libraries))
 within the `app/` directory which will get included in the server and/or browser
-bundles as needed. This currently has a caveat where you need to manually
-declare the imports using the `declare module` syntax as
-[seen here](./app/env.d.ts#L11) in order to convince the Typescript type checker
-it exists. This isn't necessary if the Deno type checker is used for the entire
-project.
+bundles as needed.
 
 ## Using the Typescript type checker instead of Deno
 
