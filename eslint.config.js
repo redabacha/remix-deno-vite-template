@@ -10,11 +10,9 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import globals from "globals";
-import tseslint from "typescript-eslint";
 
 export default [
   eslint.configs.recommended,
-  ...tseslint.configs.recommended,
   importPlugin.flatConfigs.recommended,
   jsxA11y.flatConfigs.recommended,
   react.configs.flat.recommended,
@@ -44,5 +42,5 @@ export default [
       react: { version: "detect" },
     },
   },
-  { ignores: ["app/deno.d.ts", "build/"] },
+  { ignores: ["build/"] },
 ];

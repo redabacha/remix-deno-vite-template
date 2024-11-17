@@ -6,11 +6,15 @@
     "format": "deno fmt",
     "lint": "deno lint && deno run -A npm:eslint .",
     "start": "deno serve -A --parallel ./server.production.ts",
-    "typecheck": "deno check '**/*' && deno run -A npm:typescript/tsc",
-    "typegen": "deno types > ./app/deno.d.ts"
+    "typecheck": "deno check --node-modules-dir=auto '**/*'"
   },
-  "exclude": ["app/", "build/"],
-  "fmt": { "exclude": ["!app/"] },
+  "compilerOptions": {
+    "lib": ["deno.window", "dom"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "jsxImportSourceTypes": "@types/react"
+  },
+  "exclude": ["build/"],
   "nodeModulesDir": "manual",
   "imports": {
     "@std/http": "jsr:@std/http@^1.0.8",
