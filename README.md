@@ -31,15 +31,16 @@ declare the imports using the `declare module` syntax as
 it exists. This isn't necessary if the Deno type checker is used for the entire
 project.
 
-## Using the Deno type checker for the entire project
+## Using the Typescript type checker instead of Deno
 
-Currently the VSCode Deno extension has an issue with auto-import suggestions
-for npm packages which makes not fully ideal for development at the moment, see
-[this issue](https://github.com/denoland/vscode_deno/issues/1177) for more
-information. However
-[here's a working branch](https://github.com/redabacha/remix-deno-vite-template/tree/using-deno-typechecker)
-that uses only the Deno type checker for all files with no direct dependency on
-typescript.
+It is possible to use [typescript](https://www.npmjs.com/package/typescript)
+directly for type checking instead of the built-in Deno type checker. This may
+be useful if you need to use a newer Typescript version than Deno currently
+provides or if you have Typescript language server plugins that you'd like to
+use.
+
+[Here's a working branch](https://github.com/redabacha/remix-deno-vite-template/tree/using-typescript-typechecker)
+that provides a setup for doing this.
 
 # Remix + Deno
 
