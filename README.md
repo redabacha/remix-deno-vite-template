@@ -154,7 +154,13 @@ deployctl upgrade
 
 ### Deploying to Deno Deploy
 
-After you've set up Deno Deploy, run:
+After you've set up Deno Deploy, build the app for production by running:
+
+```sh
+deno task build
+```
+
+and then run:
 
 ```sh
 deno task deploy
