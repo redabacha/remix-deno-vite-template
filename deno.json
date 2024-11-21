@@ -17,9 +17,9 @@
   "exclude": ["build/"],
   "nodeModulesDir": "manual",
   "imports": {
-    "@std/http": "jsr:@std/http@^1.0.8",
-    "@std/path": "jsr:@std/path@^1.0.6",
-    "@std/text": "jsr:@std/text@^1.0.7",
+    "@std/http": "jsr:@std/http@^1.0.10",
+    "@std/path": "jsr:@std/path@^1.0.8",
+    "@std/text": "jsr:@std/text@^1.0.8",
     "~/": "./app/"
   }
 }
