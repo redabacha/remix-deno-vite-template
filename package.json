@@ -2,27 +2,24 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@react-router/node": "*",
+    "@react-router/serve": "*",
+    "isbot": "^5.1.17",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router": "*"
+  },
+  "devDependencies": {
     "@deno/vite-plugin": "^1.0.0",
-    "@eslint/js": "^9.15.0",
-    "@redabacha/eslint-import-resolver-deno": "^1.1.4",
-    "@remix-run/dev": "*",
-    "@remix-run/react": "*",
-    "@remix-run/server-runtime": "*",
-    "@types/node": "^22.9.1",
+    "@react-router/dev": "*",
+    "@types/node": "^20",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.15.0",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "globals": "^15.12.0",
-    "isbot": "^5.1.17",
     "postcss": "^8.4.49",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.15",
-    "vite": "^5.4.11"
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vite-tsconfig-paths": "^5.1.2"
   }
 }

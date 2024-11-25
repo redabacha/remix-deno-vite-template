@@ -1,11 +1,6 @@
 # NOTES
 
-This is a fork from the
-[remix-run/templates/classic-remix-compiler/deno](https://github.com/remix-run/remix/tree/6edd56211c5b256e2e78f781695fdb39a037463e/templates/classic-remix-compiler/deno)
-template which modernizes it to use Remix v2 with Vite and no dependency on
-Node.js, only [Deno](https://deno.com/).
-
-This template has been tested with Deno v2.0.0+.
+This template has been tested with Deno v2.1.0+.
 [Live deployment here](https://huge-badger-89.deno.dev/) hosted on
 [Deno Deploy](https://deno.com/deploy).
 
@@ -14,7 +9,7 @@ This template has been tested with Deno v2.0.0+.
 Run the following command:
 
 ```zsh
-deno run -A npm:create-remix@latest --no-install --template redabacha/remix-deno-vite-template
+deno init --npm react-router --no-install --template redabacha/react-router-deno-template
 ```
 
 And then run `deno install` in the created directory.
@@ -27,131 +22,118 @@ it's possible to use packages from JSR and imports from HTTPS URLs (via the
 within the `app/` directory which will get included in the server and/or browser
 bundles as needed.
 
-## Using the TypeScript type checker instead of Deno
+## Using the Typescript type checker instead of Deno
 
-It is possible to use [typescript](https://www.npmjs.com/package/typescript)
-directly for type checking instead of the built-in Deno type checker. This may
-be useful if you need to use a newer TypeScript version than Deno currently
-provides or if you have TypeScript language server plugins that you'd like to
-use.
+Currently this template uses the Typescript type checker for files within the
+app directory - only files outside the app directory will be typechecked by
+Deno. This is because of the following open issues which is negatively impacting
+the developer experience of using the Deno type checker for the app directory:
 
-[Here's a working branch](https://github.com/redabacha/remix-deno-vite-template/tree/using-typescript-typechecker)
-that provides a setup for doing this.
+- https://github.com/denoland/deno/issues/26871
+- https://github.com/denoland/deno/issues/26224
 
-# Remix + Deno
+As a caveat of using the Typescript type checker, if you are using imports
+defined in your `deno.json` within the app directory, you must declare these
+imports as [seen here](./app/env.d.ts#L10) for example.
 
-Welcome to the Deno template for Remix! 🦕
+# Welcome to React Router!
 
-For more, check out the [Remix docs](https://remix.run/docs).
+A modern, production-ready template for building full-stack React applications
+using React Router.
 
-## Managing dependencies
+## Features
 
-- ✅ You should use `deno add` to add packages
-  ```sh
-  deno add npm:react
-  ```
-  ```ts
-  import { useState } from "react";
-  ```
-- ✅ You may use inlined URL imports, JSR imports or NPM imports.
-  ```ts
-  import { pascalCase } from "https://deno.land/x/case/mod.ts";
-  ```
-- ✅ You may use Deno and Node built-ins on the server side.
-  ```ts filename=app/entry.server.tsx
-  Deno.env.get("DENO_DEPLOYMENT_ID");
-  ```
-  ```ts filename=app/entry.server.tsx
-  import fs from "node:fs";
-  ```
+- 🚀 Server-side rendering
+- ⚡️ Hot Module Replacement (HMR)
+- 📦 Asset bundling and optimization
+- 🔄 Data loading and mutations
+- 🔒 TypeScript by default
+- 🎉 TailwindCSS for styling
+- 📖 [React Router docs](https://reactrouter.com/)
 
-## Development
+## Getting Started
 
-From your terminal:
+### Installation
 
-```sh
+Install the dependencies:
+
+```bash
+deno install
+```
+
+### Development
+
+Start the development server with HMR:
+
+```bash
 deno task dev
 ```
 
-This starts your app in development mode, rebuilding assets on file changes.
+Your application will be available at `http://localhost:5173`.
 
-## Production
+## Building for Production
 
-First, build your app for production:
+Create a production build:
 
-```sh
+```bash
 deno task build
-```
-
-Then run the app in production mode:
-
-```sh
-deno task start
 ```
 
 ## Deployment
 
-Building the Deno app (`deno task build`) results in two outputs:
+### Deno Deploy
 
-- `build/server` (server bundle)
-- `build/client` (browser bundle)
+Deployment can be done using the
+[deployctl](https://github.com/denoland/deployctl) CLI:
 
-You can deploy these bundles to any host that runs Deno, but here we'll focus on
-deploying to [Deno Deploy](https://deno.com/deploy).
-
-### Setting up Deno Deploy
-
-1. [Sign up](https://dash.deno.com/signin) for Deno Deploy.
-
-2. [Create a new Deno Deploy project](https://dash.deno.com/new) for this app.
-
-3. Replace `<your deno deploy project>` in the `deploy` script in `deno.json`
-   with your Deno Deploy project name:
-
-```json filename=deno.json
-{
-  "tasks": {
-    "deploy": "deployctl deploy --prod --include=deno.json,deno.lock,build,server --project=<your deno deploy project> ./server.production.ts"
-  }
-}
+```bash
+deployctl deploy --entrypoint ./server.production.ts
 ```
 
-4. [Create a personal access token](https://dash.deno.com/account) for the Deno
-   Deploy API and export it as `DENO_DEPLOY_TOKEN`:
+### Docker Deployment
 
-```sh
-export DENO_DEPLOY_TOKEN=<your Deno Deploy API token>
+To build and run using Docker:
+
+```bash
+docker build -t my-app .
+
+# Run the container
+docker run --init -p 8000:8000 my-app
 ```
 
-You may want to add this to your `rc` file (e.g. `.bashrc` or `.zshrc`) to make
-it available for new terminal sessions, but make sure you don't commit this
-token into `git`. If you want to use this token in GitHub Actions, set it as a
-GitHub secret.
+The containerized application can be deployed to any platform that supports
+Docker, including:
 
-5. Install the Deno Deploy CLI,
-   [`deployctl`](https://github.com/denoland/deployctl):
+- AWS ECS
+- Google Cloud Run
+- Azure Container Apps
+- Digital Ocean App Platform
+- Fly.io
+- Railway
 
-```sh
-deno install -Arfg jsr:@deno/deployctl
+### DIY Deployment
+
+If you're familiar with deploying Deno applications, the built-in app server is
+production-ready.
+
+Make sure to deploy the output of `deno task build`
+
+```
+├── package.json
+├── deno.json
+├── deno.lock
+├── build/
+│   ├── client/    # Static assets
+│   └── server/    # Server-side code
+├── server.production.ts # Entrypoint
 ```
 
-6. If you have previously installed the Deno Deploy CLI, you should update it to
-   the latest version:
+## Styling
 
-```sh
-deployctl upgrade
-```
+This template comes with [Tailwind CSS](https://tailwindcss.com/) already
+configured for a simple default starting experience. You can use whatever CSS
+framework you prefer.
 
-### Deploying to Deno Deploy
+---
 
-After you've set up Deno Deploy, build the app for production by running:
-
-```sh
-deno task build
-```
-
-and then run:
-
-```sh
-deno task deploy
-```
+Built with ❤️ using React Router.

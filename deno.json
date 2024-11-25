@@ -1,25 +1,22 @@
 {
   "tasks": {
-    "build": "deno run -A npm:@remix-run/dev vite:build",
-    "deploy": "deployctl deploy --prod --include=deno.json,deno.lock,build,package.json,server --project=<your deno deploy project> ./server.production.ts",
-    "dev": "deno run -A npm:@remix-run/dev vite:dev",
+    "build": "react-router build",
+    "dev": "react-router dev",
     "format": "deno fmt",
-    "lint": "deno lint && deno run -A npm:eslint .",
-    "start": "deno serve -A --parallel ./server.production.ts",
-    "typecheck": "deno check --node-modules-dir=auto '**/*'"
+    "lint": "deno lint",
+    "start": "deno run -A ./server.production.ts",
+    "typecheck": {
+      "command": "deno check '**/*' && tsc --build --noEmit",
+      "dependencies": ["typegen"]
+    },
+    "typegen": "deno types > ./app/deno.d.ts && react-router typegen"
   },
-  "compilerOptions": {
-    "lib": ["deno.window", "dom"],
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
-    "jsxImportSourceTypes": "@types/react"
-  },
-  "exclude": ["build/"],
+  "exclude": ["app/", "build/"],
+  "fmt": { "exclude": ["!app/"] },
+  "lint": { "exclude": ["!app/", "app/deno.d.ts"] },
   "nodeModulesDir": "manual",
   "imports": {
-    "@std/http": "jsr:@std/http@^1.0.10",
-    "@std/path": "jsr:@std/path@^1.0.8",
-    "@std/text": "jsr:@std/text@^1.0.8",
-    "~/": "./app/"
+    "@std/http": "jsr:@std/http@^1.0.11",
+    "@std/path": "jsr:@std/path@^1.0.8"
   }
 }

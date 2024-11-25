@@ -1,3 +1,10 @@
+.env
+!.env.example
+.DS_Store
+.react-router
+build
 node_modules
+*.tsbuildinfo
+
+# Deno specific
 /app/deno.d.ts
-/build

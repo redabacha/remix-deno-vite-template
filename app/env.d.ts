@@ -1,11 +1,10 @@
-// This is to avoid needing to specify the @deno-types directive for every react and react-dom import.
-declare module "react" {
-  // @deno-types="@types/react"
-  import React from "npm:react";
-  // @ts-expect-error deno export assignment deprecation
-  export = React;
+// This is set again here to override the Deno types.
+/// <reference lib="dom" />
+
+// This isn't declared by the @types/react-dom package but exists as an export of react-dom.
+declare module "react-dom/server.browser" {
+  export * from "react-dom/server";
 }
-declare module "react-dom" {
-  // @deno-types="@types/react-dom"
-  export * from "npm:react-dom";
-}
+
+// Imports from deno.json must be declared here manually as tsc won't be aware of them.
+// e.g. declare module "@std/text";
