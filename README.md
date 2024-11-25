@@ -14,7 +14,7 @@ deno init --npm react-router --no-install --template redabacha/react-router-deno
 
 And then run `deno install` in the created directory.
 
-## Using JSR and HTTPS imports
+## Using JSR and HTTPS imports in `app/`
 
 Thanks to the [@deno/vite-plugin](https://github.com/denoland/deno-vite-plugin),
 it's possible to use packages from JSR and imports from HTTPS URLs (via the
@@ -22,7 +22,7 @@ it's possible to use packages from JSR and imports from HTTPS URLs (via the
 within the `app/` directory which will get included in the server and/or browser
 bundles as needed.
 
-## Using the Typescript type checker instead of Deno
+## Using the Typescript type checker instead of Deno in `app/`
 
 Currently this template uses the Typescript type checker for files within the
 app directory - only files outside the app directory will be typechecked by
