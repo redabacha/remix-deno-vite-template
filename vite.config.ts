@@ -12,4 +12,10 @@ export default defineConfig({
     },
   },
   plugins: [deno(), reactRouter(), tsconfigPaths()],
+  ssr: {
+    resolve: {
+      conditions: ["module", "deno", "node", "development|production"],
+      externalConditions: ["deno", "node"],
+    },
+  },
 });

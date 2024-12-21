@@ -2,21 +2,21 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "isbot": "^5.1.17",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "isbot": "^5.1.18",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-router": "*"
   },
   "devDependencies": {
-    "@deno/vite-plugin": "^1.0.0",
+    "@deno/vite-plugin": "^1.0.2",
     "@react-router/dev": "*",
-    "@types/node": "^20",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
     "autoprefixer": "^10.4.20",
-    "tailwindcss": "^3.4.15",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5.6.3",
-    "vite": "^5.4.11",
-    "vite-tsconfig-paths": "^5.1.2"
+    "vite": "^6.0.5",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }

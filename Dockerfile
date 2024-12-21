@@ -1,4 +1,4 @@
-FROM denoland/deno:2.1.1 AS build-env
+FROM denoland/deno:2.1.4 AS build-env
 COPY . /app/
 WORKDIR /app
 RUN deno install

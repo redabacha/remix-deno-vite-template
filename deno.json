@@ -1,12 +1,12 @@
 {
   "tasks": {
-    "build": "react-router build",
+    "build": "NODE_ENV=production react-router build",
     "dev": "react-router dev",
     "format": "deno fmt",
     "lint": "deno lint",
     "start": "deno run -A ./server.production.ts",
     "typecheck": {
-      "command": "deno check '**/*' && tsc --build --noEmit",
+      "command": "deno check '**/*' && tsc",
       "dependencies": ["typegen"]
     },
     "typegen": "deno types > ./app/deno.d.ts && react-router typegen"
